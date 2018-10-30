@@ -143,6 +143,8 @@ class Client():
                 return  # discard duplicate metrics
             else:
                 _last_metrics.add(unique_str)
+            if _last_timestamp == None:
+                _last_timestamp = timestamp
         else:
             _last_timestamp = timestamp
             _last_metrics.clear()
